@@ -1,6 +1,9 @@
 #PongDeterministic-v4#
+
 <p>By Kaihang 1400012727</p>
+
 ##Files##
+
 <b><li>test.py</li></b>
 This is the file for training.
 <b><li>test.py</li></b>
@@ -9,7 +12,9 @@ This is the main code file for test. It only contains the test. Training is not 
 This the model dmp by pickle with 34000 episodes.
 <b><li>README.md</li></b>
 This file.
+
 ##Environment##
+
 <li>Ubuntu 16.04</li>
 <li>Python 3.5.2</li>
 <li>numpy</li>
@@ -17,6 +22,7 @@ This file.
 <li>pickle</li>
 
 ##How to use test.py##
+
 __Make sure you put model.pkl in the same dir with test.py__
 <pre><code>$python3 test.py</code></pre>
 <p>Then it should go like this:<p>
@@ -31,7 +37,9 @@ __Make sure you put model.pkl in the same dir with test.py__
 <li>'Episode' is the episode number.</li> 
 <li>'Reward' is the goal differece: the goal this program gets to the goal its opponent gets in one game. </li>
 <li>'StepPerMatch' is the average step per match in this game.</li>
+
 ###Render###
+
 If you'd like to watch how it plays, you can uncomment the 40th line in test.py:
 <pre><code>...
 [39]	while True:
@@ -49,7 +57,9 @@ After:
 Save and run.
 
 ##How to use train.py##
+
 ###Resume training###
+
 Resume training from *model.pkl* in the same dir.
 <pre><code>$python3 train.py</code></pre>	
 <p>Then it should go like this:<p>
@@ -62,7 +72,9 @@ Resume training from *model.pkl* in the same dir.
 ...
 </code></pre>
 It will save for every 250 episodes. Names of autosave files are "backup\_($episode\_num)\_($running\_mean).pkl".
+
 ###Start a new train###
+
 In Line 54,
 <pre><code>...
 [53]	game="PongDeterministic-v4"
