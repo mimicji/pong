@@ -1,7 +1,7 @@
 #Pong-v0#
 
 <p>By Kaihang 1400012727</p>
-
+[Link to github](https://github.com/mimicji/pong/tree/master/Pong-v0) 
 ##Files##
 
 <b><li>test.py</li></b>
@@ -40,7 +40,7 @@ __Make sure you put model.pkl in the same dir with test.py__
 
 ###Render###
 
-If you'd like to watch how it plays, you can modify Line 28 from *False* to 'True' in test.py:
+If you'd like to watch how it plays, you can modify Line 28 from *False* to *True* in test.py:
 <pre><code>...
 [27]	game = "Pong-v0"
 [28]	render = <del>False</del>True
@@ -69,17 +69,10 @@ It will save for every 250 episodes. Names of autosave files are "backup\_($epis
 
 ###Start a new train###
 
-In Line 54,
+In Line 54, set resume as False:
 <pre><code>...
 [53]	game="Pong-v0"
-[54]	resume=True
-[55]	render=False
-...
-</pre></code>
-Set *resume* as *False*
-<pre><code>...
-[53]	game="Pong-v0"
-[54]	resume=False
+[54]	resume=~~True~~False
 [55]	render=False
 ...
 </pre></code>
