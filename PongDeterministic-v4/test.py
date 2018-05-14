@@ -1,6 +1,7 @@
 import numpy as np
 import gym
 import pickle
+import time
 
 def sigmoid(x): 
 	return 1.0 / (1.0 + np.exp(-x))
@@ -24,9 +25,10 @@ def policyForward(img,model):
 	
 def play():
 	game = "PongDeterministic-v4"
-	dimension = 80*80  
+	render = False
 	rewardSum = 0	
 	episode = 0
+	dimension = 80*80
 	movingMean = None
 	model, movingMean, episode = pickle.load(open('model.pkl','rb'))
 	print("[INIT]Resume at Episode {} MovingMean={}".format(episode, movingMean))
@@ -37,7 +39,9 @@ def play():
 	gameId = 0
 	print("[PLAY]Begin playing {}".format(game))
 	while True:
-		#env.render()
+		if render:
+			env.render()
+			time.sleep(2e-2)
 		curImage = imageInit(image)				
 		image = curImage - prevImage if prevImage is not None else np.zeros(dimension)				
 		prevImage = curImage  						

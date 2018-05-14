@@ -40,20 +40,14 @@ __Make sure you put model.pkl in the same dir with test.py__
 
 ###Render###
 
-If you'd like to watch how it plays, you can uncomment the 40th line in test.py:
+If you'd like to watch how it plays, you can modify Line 28 from *False* to 'True' in test.py:
 <pre><code>...
-[39]	while True:
-[40]		#env.render()
-[41]		curImage = imageInit(image)		
+[27]	game = "Pong-v0"
+[28]	render = <del>False</del>True
+[29]	rewardSum = 0		
 ...
 </code></pre>
-After:
-<pre><code>...
-[39]	while True:
-[40]		env.render()
-[41]		curImage = imageInit(image)		
-...
-</code></pre>
+
 Save and run.
 
 ##How to use train.py##
