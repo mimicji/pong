@@ -37,7 +37,7 @@ def play():
 	gameId = 0
 	print("[PLAY]Begin playing {}".format(game))
 	while True:
-		#env.render()
+		env.render()
 		curImage = imageInit(image)				
 		image = curImage - prevImage if prevImage is not None else np.zeros(dimension)				
 		prevImage = curImage  						
