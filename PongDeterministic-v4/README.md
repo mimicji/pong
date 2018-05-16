@@ -9,7 +9,7 @@ This is the file for training.
 <b><li>test.py</li></b>
 This is the main code file for test. It only contains the test. Training is not included.
 <b><li>model.pkl</li></b>
-This the model dmp by pickle with 34000 episodes.
+This the model dmp by pickle with 48000 episodes.
 <b><li>README.md</li></b>
 This file.
 
@@ -26,12 +26,12 @@ This file.
 __Make sure you put model.pkl in the same dir with test.py__
 <pre><code>$python3 test.py</code></pre>
 <p>Then it should go like this:<p>
-<pre><code>ubuntu@google:~/Learning/pong$ python3 test.py
-[INIT]Resume at Episode 32500 MovingMean=-0.9483063444039457
+<pre><code>ubuntu@google:~/git/pong/PongDeterministic-v4$ python3 ./test.py
+[INIT]Resume at Episode 48000 MovingMean=20.980379730208632
 [PLAY]Begin playing PongDeterministic-v4
-[GAME 1]Episode:32501 Reward: -3.0. StepPerMatch: 208.0.
-[GAME 2]Episode:32502 Reward: -1.0. StepPerMatch: 196.34146341463415.
-[GAME 3]Episode:32503 Reward: 11.0. StepPerMatch: 168.2258064516129.
+[GAME 1]Episode:48001 Reward: 21.0 StepPerMatch: 120.66666666666667
+[GAME 2]Episode:48002 Reward: 21.0 StepPerMatch: 120.66666666666667
+[GAME 3]Episode:48003 Reward: 21.0 StepPerMatch: 120.66666666666667
 ...
 </code></pre>
 <li>'Episode' is the episode number.</li> 
@@ -71,7 +71,7 @@ Resume training from *model.pkl* in the same dir.
 [TRAIN][32503]Reward: 5.0. Moving mean: -0.920135697668804. TotalSteps: 7142. StepPerMatch 193.02702702702703
 ...
 </code></pre>
-It will save for every 250 episodes. Names of autosave files are "backup\_($episode\_num)\_($running\_mean).pkl".
+It will save for every 1000 episodes. Names of autosave files are "backup\_($episode\_num)\_($running\_mean).pkl".
 
 ###Start a new train###
 
